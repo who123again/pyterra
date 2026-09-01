@@ -102,6 +102,8 @@ class Game:
                 if e.key == pygame.K_ESCAPE:
                     if self.inv_open:
                         self.inv_open = False
+                    elif self.help_open:
+                        self.help_open = False
                     else:
                         self.running = False
                 elif e.key == pygame.K_SPACE:
@@ -126,6 +128,8 @@ class Game:
                     self.player.selected = (self.player.selected - 1) % HOTBAR
                 elif e.button == 5:
                     self.player.selected = (self.player.selected + 1) % HOTBAR
+                elif self.help_open and e.button in (1, 3):
+                    self.help_open = False
                 elif self.inv_open and e.button in (1, 3):
                     self.ui_click(e.pos)
             elif e.type == pygame.MOUSEMOTION and self.inv_open:

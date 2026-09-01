@@ -212,7 +212,7 @@ def draw_help(surf):
         "1-0 / wheel .... select hotbar slot",
         "E .............. inventory & crafting",
         "F5 ............. save game",
-        "H .............. toggle this help",
+        "H / ESC / click  close this help",
         "ESC ............ quit",
         "",
         "Dig deep for copper, iron and gold. Beware the night.",
